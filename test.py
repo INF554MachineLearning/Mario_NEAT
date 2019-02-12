@@ -152,7 +152,7 @@ p.add_reporter(neat.StdOutReporter(True))
 stats = neat.StatisticsReporter()
 p.add_reporter(stats)
 p.add_reporter(neat.Checkpointer(10))
-
+#p = neat.Checkpointer().restore_checkpoint('neat-checkpoint-448')
 winner = p.run(eval_genomes)
 
 with open('winner.pkl', 'wb') as output:
